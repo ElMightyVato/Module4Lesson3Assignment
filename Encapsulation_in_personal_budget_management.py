@@ -1,4 +1,4 @@
-class Budget:
+class BudgetCategory:
     def __init__(self, category_name, allocated_budget): # Function to initialize category name and allocated budget
         self.__category_name = category_name  # private attribute for category name
         self.__allocated_budget = allocated_budget  # private attribute for allocated budget
@@ -36,13 +36,13 @@ class Budget:
     
 
 # Examples of code being utilized
-Game_collection = Budget("Devil May Cry ", 500)
-Game_collection.add_expense(32)
-Game_collection.display_category_summary()
+food_category = BudgetCategory("Food", 500)
+food_category.add_expense(100)
+food_category.display_category_summary()
 
 # Attempting to get an invalid response
-Game_collection.add_expense(600)
+food_category.add_expense(600)
 
 # Updating the budget and displaying the updated one
-Game_collection.set_allocated_budget(600)
-Game_collection.display_category_summary()
+food_category.set_allocated_budget(600)
+food_category.display_category_summary()
